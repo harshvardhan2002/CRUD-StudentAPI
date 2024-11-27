@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h1 class="text-primary mt-5">Update Student</h1>
+  <form [formGroup]="studentForm" (ngSubmit)="updateStudent()" class="needs-validation">
+    <div class="mt-3">
+      <label>Roll No</label>
+      <input type="number" class="form-control" placeholder="RollNo" formControlName="rollNo" readonly>
+    </div>
+    <div class="mt-3">
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="mt-3">
+      <label>Age</label>
+      <input type="number" class="form-control" placeholder="Enter Age" formControlName="age">
+    </div>
+    <div class="mt-3">
+      <label>Email</label>
+      <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
+    </div>
+    <div class="mt-3">
+      <label>Date</label>
+      <input type="date" class="form-control" placeholder="Enter Date" formControlName="date">
+    </div>
+    <div class="mt-3">
+      <input type="checkbox" class="form-check-input" formControlName="isMale">
+      <label class="mx-2">Is Male</label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Update</button>
+  </form>
+</div>

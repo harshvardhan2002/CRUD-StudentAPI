@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <a routerLink="/addStudent" class="btn btn-primary mb-3">Create Student</a>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>RollNo</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Gender</th>
+        <th>Delete?</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentData">
+        <td>{{student.rollNo}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.date}}</td>
+        <td>{{student.isMale ? "Male" : "Female"}}</td>
+        <td>
+          <button (click)="deleteStudent(student.id)" class="btn btn-danger btn-sm">Delete</button>
+        </td>
+        <td>
+          <button [routerLink]="['/updateStudent', student.id]" class="btn btn-info btn-sm">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
